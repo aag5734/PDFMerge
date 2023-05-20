@@ -46,7 +46,7 @@ def merge_files(files):
     merger = PdfMerger()
     for filename in files:
         merger.append(PdfReader(open(filename, 'rb')))
-    merger.write("out/result.pdf")
+    merger.write(os.path.abspath("result.pdf"))
 
 if __name__ == "__main__":
     main()
